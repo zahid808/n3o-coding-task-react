@@ -1,5 +1,5 @@
 import http from "./httpServices";
-import { donationItemsAll } from '../globalConstant'
+import { donationItemsAll, createDonationItems } from '../globalConstant'
 
 
 const getAllDonations = async () => {
@@ -9,6 +9,14 @@ const getAllDonations = async () => {
     }
 };
 
+const createDonation = async (req) => {
+    const data = await http.post(createDonationItems, req);
+    if (data.status === 200) {
+        return data;
+    }
+};
+
 export {
-    getAllDonations
+    getAllDonations,
+    createDonation
 }

@@ -101,43 +101,33 @@ const ViewDonation = ({ rowSelection, data, rowKey, scroll }) => {
         title: "Donation Name",
         dataIndex: "name",
         key: "id",
-        sorter: (a, b) =>  a.appNo.localeCompare(b.appNo),
-        ...getColumnSearchProps("name"),
       },
       {
         title: "Reference",
         dataIndex: "reference",
-        key: "id",
-        sorter: (a, b) =>  a.orgName.length - b.orgName.length,
-        ...getColumnSearchProps("reference"),
+        key: "id"
       },
       {
         title: "Price",
         dataIndex: "price",
-        key: "id",
-        sorter: (a, b) => a.certificationType.length - b.certificationType.length,
-        ...getColumnSearchProps("price"),
+        key: "id"
+      },
+      {
+        title: "Location",
+        dataIndex: "location",
+        key: "id"
+      },
+      {
+        title: "Theme",
+        dataIndex: "theme",
+        key: "id"
       },
       {
         title: "Status",
         dataIndex: "status",
         key: "id",
-        sorter: (a, b) => a.ntn.length - b.ntn.length,
+        sorter: (a, b) => a.status - b.status,
         ...getColumnSearchProps("status"),
-      },
-      {
-        title: "Location",
-        dataIndex: "location",
-        key: "id",
-        sorter: (a, b) =>  a.applicationStatus.length - b.applicationStatus.length,
-        ...getColumnSearchProps("location"),
-      },
-      {
-        title: "Theme",
-        dataIndex: "theme",
-        key: "id",
-        sorter: (a, b) =>  a.applicationStatus.length - b.applicationStatus.length,
-        ...getColumnSearchProps("theme"),
       },
     ];
 

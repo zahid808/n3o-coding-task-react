@@ -89,10 +89,18 @@ a {
   border-bottom: 1px solid #0883fd !important;
 }
 
-span.anticon.anticon-caret-up, span.anticon.anticon-caret-down {
+span.anticon.anticon-caret-up, 
+span.anticon.anticon-caret-down {
   color: #fff;
 }
 
-span.ant-table-column-title {
-  color: #fff;
+span.ant-table-column-title,
+th.ant-table-cell {
+  color: #fff !important;
+}
+
+.add-donation {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
