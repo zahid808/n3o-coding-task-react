@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React, { useState, useEffect } from 'react'
 import { getAllDonations } from '../../services/helper';
 import Loader from '../../components/Loader'
 import { Table, Button, Popconfirm, notification } from "antd";
@@ -23,7 +23,7 @@ const MainDonation = () => {
             setLoading(false);
             if (res.status === 200 && res?.data?.length > 0) {
                 setLoading(false);
-              
+
                 let filterList = res?.data?.map((itm, key) => {
                     return {
                         ...itm,
@@ -46,7 +46,7 @@ const MainDonation = () => {
     };
 
     return (
-        <Fragment>
+        <>
             {loading && <Loader />}
             <div className='donation-wrapper'>
                 <h1 className='title'>Welcome to Donation App</h1>
@@ -73,7 +73,7 @@ const MainDonation = () => {
                     setShowModal={setShowModal}
                     getDonationsOnLoadPage={getDonationsOnLoadPage} />
             }
-        </Fragment>
+        </>
     )
 }
 
